@@ -1,0 +1,117 @@
+.contact-container {
+    background-color: #0a192f;
+    min-height: 100vh;
+    padding: 2rem;
+    color: white;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  
+  .contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    padding: 2rem;
+    background-color: rgba(2, 12, 27, 0.7);
+    border-radius: 10px;
+  }
+  
+  .contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .icon {
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+  }
+  
+  .text h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .text p {
+    margin: 0;
+    color: #8892b0;
+  }
+  
+  .contact-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #64ffda;
+  }
+  
+  .submit-btn {
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .submit-btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+  }
+  
+  @media (max-width: 768px) {
+    .contact-content {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .contact-info {
+      order: 2;
+    }
+    
+    .contact-form {
+      order: 1;
+    }
+  }

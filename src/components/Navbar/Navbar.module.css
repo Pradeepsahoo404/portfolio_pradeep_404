@@ -1,0 +1,102 @@
+@import "../../vars.css";
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 61px 10%;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* .title:hover {
+  color: var(--color-accent);
+} */
+
+.menu {
+  position: relative;
+  display: flex;
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menuBtn img {
+  width: 30px;
+  height: 30px;
+}
+
+.menuItems {
+  display: flex;
+  gap: 47px;
+  list-style: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menuItems a {
+  font-size: 25px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+/* 
+.menuItems a:hover {
+  color: var(--color-accent);
+} */
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 830px) {
+  .navbar {
+    padding: 30px 10%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .menuItems {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(25, 55, 109, 0.95);
+    border-radius: 10px;
+    padding: 24px 33px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 3;
+  }
+
+  .menuOpen {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  /* Smooth transition for opening menu */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

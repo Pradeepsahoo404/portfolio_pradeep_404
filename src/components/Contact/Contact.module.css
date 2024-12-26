@@ -1,0 +1,110 @@
+@import "../../vars.css";
+
+/* Container Styling */
+.container {
+  color: var(--color-text);
+  margin-top: 0px;
+  background-color: var(--color-secondary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100vw;
+  padding: 58px 10%;
+  gap: 30px; /* Increased gap for better spacing */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Section */
+.text h2 {
+  font-size: 60px; /* Reduced size for better mobile adaptation */
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  margin-bottom: 40px;
+}
+
+/* Links Section */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 20px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.link a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link:hover a {
+  color: var(--color-accent); /* Add hover effect to make links stand out */
+  transform: translateX(5px); /* Slight horizontal movement */
+}
+
+/* Icon Styling */
+.link img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+}
+
+.link:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .text h2 {
+    font-size: 40px; /* Adjusted size for mobile */
+  }
+
+  .text p {
+    font-size: 20px;
+  }
+
+  .links {
+    align-items: center;
+    gap: 16px;
+  }
+
+  .link a {
+    font-size: 20px;
+  }
+
+  .link img {
+    width: 30px;
+    height: 30px;
+  }
+}

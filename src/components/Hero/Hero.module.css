@@ -1,0 +1,143 @@
+@import "../../vars.css";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10%;
+  margin-top: 1px;
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text);
+  z-index: 1;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 900;
+  margin-bottom: 24px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.description {
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: var(--font-roboto);
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+.contactBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 24px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* 
+.contactBtn:hover {
+  background-color: var(--color-accent);
+} */
+
+.heroImg {
+  width: 45%;
+  z-index: 1;
+  animation-name: floating;
+  animation-duration: 3.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.topBlur,
+.bottomBlur {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.topBlur {
+  width: 50vw;
+  height: 50vw;
+  top: -128px;
+  left: -10vw;
+}
+
+.bottomBlur {
+  width: 70vw;
+  height: 50vw;
+  top: 246px;
+  right: -25vw;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+    padding: 20px 5%;
+    text-align: center;
+  }
+
+  .content {
+    align-items: center;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .heroImg {
+    width: 100%;
+    max-width: 350px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .contactBtn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}

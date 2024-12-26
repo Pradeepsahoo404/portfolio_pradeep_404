@@ -1,0 +1,16 @@
+[
+  {
+    "role": "Full Stack Developer",
+    "organisation": "Kukami Technology",
+    "startDate": "June, 2021",
+    "endDate": "Present",
+    "imageSrc": "history/kukami.jpeg"
+  },
+  {
+    "role": "Software Engineer",
+    "organisation": "Tech Web Labs",
+    "startDate": "July, 2022",
+    "endDate": "April, 2023",
+    "imageSrc": "history/images.png"
+  }
+]

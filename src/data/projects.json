@@ -1,0 +1,20 @@
+[
+  {
+    "title": "KAVACH- Science of Security",
+    "imageSrc": "projects/kavach.PNG",
+    "description": "Kavach orchestrates a dual-application system for guards .....",
+    "skills": ["React", "Redux", "Express", "Node" , "Mongodb"]
+  },
+  {
+    "title": "KIMI-Booking-Application",
+    "imageSrc": "projects/coding.jpg",
+    "description": "KIMI is an online marketplace connecting travelers with .....",
+    "skills": ["Express", "Node" , "Mongodb" , "Postman"]
+  },
+  {
+    "title": "TSS-jewellery",
+    "imageSrc": "projects/coding2.jpg",
+    "description": "This is Jewellery project Dashboard managing stock and sel....",
+    "skills": ["Express", "Node" , "Mongodb" ,"React", "Redux"]
+  }
+]
